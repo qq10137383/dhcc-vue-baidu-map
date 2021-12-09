@@ -1,6 +1,6 @@
 {
   "name": "dhcc-vue-baidu-map",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Baidu Map Component for Vue 2.0，change map api to 3.0",
   "main": "index.js",
   "directories": {
