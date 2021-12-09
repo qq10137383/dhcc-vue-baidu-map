@@ -255,13 +255,16 @@ export default {
       });
       this.map = map;
       const { setMapOptions, zoom, getCenterPoint, theme, mapStyle, mapStyleV2 } = this;
-      theme ? map.setMapStyle({ styleJson: theme }) : map.setMapStyle(mapStyle);
-      mapStyleV2 && map.setMapStyleV2(mapStyle);
       setMapOptions();
       bindEvents.call(this, map);
       // 此处强行初始化一次地图 回避一个由于错误的 center 字符串导致初始化失败抛出的错误
       map.reset();
       map.centerAndZoom(getCenterPoint(), zoom);
+      
+      // 需要等到调用centerAndZoom之后才能设置mapStyle，否则会报错
+      theme ? map.setMapStyle({ styleJson: theme }) : map.setMapStyle(mapStyle);
+      mapStyleV2 && map.setMapStyleV2(mapStyleV2);
+      
       this.$emit("ready", { BMap, map });
       // Debug
       // global.map = map
