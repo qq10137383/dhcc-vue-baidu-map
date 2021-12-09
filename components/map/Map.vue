@@ -254,8 +254,9 @@ export default {
         enableMapClick: this.mapClick,
       });
       this.map = map;
-      const { setMapOptions, zoom, getCenterPoint, theme, mapStyle } = this;
+      const { setMapOptions, zoom, getCenterPoint, theme, mapStyle, mapStyleV2 } = this;
       theme ? map.setMapStyle({ styleJson: theme }) : map.setMapStyle(mapStyle);
+      mapStyleV2 && map.setMapStyleV2(mapStyle);
       setMapOptions();
       bindEvents.call(this, map);
       // 此处强行初始化一次地图 回避一个由于错误的 center 字符串导致初始化失败抛出的错误

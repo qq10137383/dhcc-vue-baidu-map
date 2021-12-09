@@ -1,5 +1,5 @@
 {
-  "name": "@dhcc/vue-baidu-map",
+  "name": "dhcc-vue-baidu-map",
   "version": "1.0.0",
   "description": "Baidu Map Component for Vue 2.0，change map api to 3.0",
   "main": "index.js",
@@ -18,7 +18,7 @@
   "types": "types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dafrok/vue-baidu-map.git"
+    "url": "git+git@github.com:qq10137383/dhcc-vue-baidu-map.git"
   },
   "keywords": [
     "vue",
@@ -31,7 +31,7 @@
   "author": "Dafrok <o.o@mug.dog>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Dafrok/vue-baidu-map/issues"
+    "url": "https://github.com/qq10137383/dhcc-vue-baidu-map/issues"
   },
   "homepage": "https://github.com/Dafrok/vue-baidu-map#readme",
   "devDependencies": {
